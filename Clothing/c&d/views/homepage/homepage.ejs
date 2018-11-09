@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Clothing -> Home</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template-->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="/homepage"> Clothing </a>
+        <!--<a class="nav-link" href="/cartlist" id="carticon">
+          <i class="fa fa-shopping-cart" style="font-size:24px;color:white"></i>
+          <span class="text-white" id="cartitem"></span>
+        </a> -->
+        <button type="button" class="btn btn-dark btn-sm" id="cart-btn">
+          <i class="fa fa-shopping-cart" style="font-size:24px;color:white"></i>
+          <span class="text-white" id="cartitem"></span>
+        </button>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clothes & Dresses
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+              <a class="dropdown-item" href="/allclothings">All Clothings</a>
+              <a class="dropdown-item" href="/mensclothing">Men's Clothing</a>
+              <a class="dropdown-item" href="/womensclothing">Women's Clothing</a>
+              <a class="dropdown-item" href="/childsclothing">Child's Clothing</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contactus">Contact Us</a>
+            </li>
+            <% if(name==""){%>
+            <li class="nav-item">
+              <a class="nav-link" href="/loginpage">login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/registerpage">Register</a>
+            </li>
+            <% }else if(name!=""){%>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><%=name %></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">logout</a>
+            </li>
+            <% } %>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <!-- Slide One - Set the background image for this slide in the line below -->
+          <div class="carousel-item active" style="background-image: url('images/coverm1.jpg')">
+            <div class="carousel-caption d-none d-md-block">
+              
+            </div>
+          </div>
+          <!-- Slide Two - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="background-image: url('images/cover2.jpg')">
+            <div class="carousel-caption d-none d-md-block">
+              
+            </div>
+          </div>
+          <!-- Slide Three - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="background-image: url('images/coverm3.jpg')">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <h1 class="my-4">Welcome to Clothing.com</h1>
+
+      <!-- Marketing Icons Section -->
+      <div class="row">
+        <div class="col-lg-3 mb-4">
+          <div class="card h-100">
+            <h4 class="card-header">All Clothing</h4>
+              <img class="card-img-top" src="images/allclth2.jpg" onerror="this.src = 'http://placehold.it/700x400'" alt="">
+            <div class="card-footer">
+              <a href="/allclothings" class="btn btn-primary btn-block">See More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 mb-4">
+          <div class="card h-100">
+            <h4 class="card-header">Men's Clothing</h4>
+              <img class="card-img-top" src="images/casual blazer.jpg" onerror="this.src = 'http://placehold.it/700x400'" alt="">
+            <div class="card-footer">
+              <a href="/mensclothing" class="btn btn-primary btn-block">See More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 mb-4">
+          <div class="card h-100">
+            <h4 class="card-header">Women's Clothing</h4>
+            <img class="card-img-top" src="images/saree.jpg" onerror="this.src = 'http://placehold.it/700x400'" alt="">
+            <div class="card-footer">
+              <a href="/womensclothing" class="btn btn-primary btn-block">See More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 mb-4">
+          <div class="card h-100">
+            <h4 class="card-header">Child's Clothing</h4>
+            <img class="card-img-top" src="images/summer dess.jpg" onerror="this.src = 'http://placehold.it/700x400'" alt="">
+            <div class="card-footer">
+              <a href="/childsclothing" class="btn btn-primary btn-block">See More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <!-- Portfolio Section -->
+        
+      <!-- /.row -->
+
+      <!-- Features Section -->
+      
+      <!-- /.row -->
+
+      <hr>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Clothing.com 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
